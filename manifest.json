@@ -1,0 +1,20 @@
+{
+  "name": "Geforce NOW Russia Chrome Extension",
+  "description": "Geforce NOW Russia Compatibility Steam Games",
+  "version": "1.0",
+  "author": "Ivan Sidorov",
+  "manifest_version": 3,
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/img/logo-gfn.svg"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://store.steampowered.com/app/*"],
+      "css": ["style.css"],
+      "js": ["app.js"]
+    }
+  ]
+}
