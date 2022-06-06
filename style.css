@@ -1,12 +1,8 @@
 .gfnr {
   display: inline-flex;
   position: absolute;
-  left: 0;
-  bottom: -45px;
-  background-color: black;
-  border: 1px solid #76b900;
-  box-shadow: 2px 1px 1px #76b900;
-  padding: 8px;
+  left: 18px;
+  bottom: -48px;
   z-index: 99;
 }
 
@@ -14,9 +10,9 @@
   display: block;
 }
 
-.gfnr__logo {
-  width: 144px;
-  height: 24px;
+.gfnr__btn {
+  width: 128px;
+  height: 28px;
 }
 
 @media screen and (max-width: 910px) {

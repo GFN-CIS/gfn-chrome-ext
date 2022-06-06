@@ -1,8 +1,8 @@
 // fetch supported games
 async function fetchGames() {
-  return fetch(
-    'https://static.nvidiagrid.net/supported-public-game-list/gfnpc.json'
-  ).then((response) => response.json());
+  return fetch('https://storage.yandexcloud.net/gfn-games/results.json').then(
+    (response) => response.json()
+  );
 }
 
 // check game supported
@@ -21,12 +21,12 @@ function inject() {
   console.log('inject function');
 
   const appHubAppName = document.getElementById('appHubAppName');
-  const logo = chrome.runtime.getURL('assets/img/logo-gfn.svg');
+  const logo = chrome.runtime.getURL('assets/img/btn.svg');
 
   const injectHtml = `
     <div class="gfnr">
-      <a href="https://gfn.ru" target="_blank" class="gfnr__link">
-        <img src="${logo}" alt="Geforce NOW Russia" width="144" height="24" class="gfnr__logo" />
+      <a href="https://gfn.ru/games.html" target="_blank" class="gfnr__link">
+        <img src="${logo}" alt="Geforce NOW Russia" width="128" height="28" class="gfnr__btn" />
       </a>  
     </div>
   `;
